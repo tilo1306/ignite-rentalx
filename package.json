@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/tilo1306/ignite-rentalx.git",
   "author": "Douglas dos Santos Oliveira <doug1306@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
