@@ -1,0 +1,8 @@
+{
+  "name": "ignite-rentalx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tilo1306/ignite-rentalx.git",
+  "author": "Douglas dos Santos Oliveira <doug1306@gmail.com>",
+  "license": "MIT"
+}
