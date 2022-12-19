@@ -5,6 +5,9 @@
   "repository": "https://github.com/tilo1306/ignite-rentalx.git",
   "author": "Douglas dos Santos Oliveira <doug1306@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only  --ignore-watch node_modules --respawn src/server.ts"
+  },
   "dependencies": {
     "express": "^4.18.2"
   },
