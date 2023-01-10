@@ -3,7 +3,7 @@ import { User } from "../entities/User";
 
 interface IUsersRepository {
   create(data: ICreateCategoryDTO): Promise<void>;
-  list(username: string): Promise<User>;
+  list(name: string): Promise<User>;
 }
 
 export { IUsersRepository };

@@ -9,23 +9,16 @@ class CreateUserUseCase {
     @inject("UsersRepository")
     private usersRepository: IUsersRepository
   ) {}
-  async execute({
-    name,
-    email,
-    username,
-    password,
-    driver_license,
-  }: ICreateCategoryDTO) {
-    const usernameAlreadyExists = await this.usersRepository.list(username);
+  async execute({ name, email, password, driver_license }: ICreateCategoryDTO) {
+    const usernameAlreadyExists = await this.usersRepository.list(name);
 
     if (usernameAlreadyExists) {
-      throw new Error("Username Already exists");
+      throw new Error("Name Already exists");
     }
 
     this.usersRepository.create({
       name,
       email,
-      username,
       password,
       driver_license,
     });
