@@ -1,4 +1,4 @@
-interface ICreateCategoryDTO {
+interface ICreateUserDTO {
   name: string;
   password: string;
   email: string;
@@ -7,4 +7,4 @@ interface ICreateCategoryDTO {
   avatar?: string;
 }
 
-export { ICreateCategoryDTO };
+export { ICreateUserDTO };
