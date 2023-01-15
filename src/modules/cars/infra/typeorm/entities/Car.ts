@@ -10,7 +10,7 @@ import { v4 as uuidV4 } from "uuid";
 
 import { Category } from "./Category";
 
-@Entity("carss")
+@Entity("cars")
 class Car {
   @PrimaryColumn()
   id: string;
@@ -25,7 +25,7 @@ class Car {
   daily_rate: number;
 
   @Column()
-  available = true;
+  available: boolean;
 
   @Column()
   license_plate: string;
@@ -36,7 +36,7 @@ class Car {
   @Column()
   brand: string;
 
-  @ManyToOne()
+  @ManyToOne(() => Category)
   @JoinColumn({ name: "category_id" })
   category: Category;
 
@@ -49,6 +49,7 @@ class Car {
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
+      this.available = true;
     }
   }
 }
