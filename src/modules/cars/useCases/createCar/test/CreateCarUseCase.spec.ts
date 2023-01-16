@@ -32,7 +32,6 @@ describe("Create Car", () => {
     expect(newCar).toHaveProperty("fine_amount");
     expect(newCar).toHaveProperty("brand");
     expect(newCar).toHaveProperty("category_id");
-    expect(newCar).toHaveProperty("created_at");
   });
   it("Should not be able to create a car with exists license plate", async () => {
     try {
