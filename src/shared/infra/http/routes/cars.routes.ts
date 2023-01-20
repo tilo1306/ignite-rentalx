@@ -21,6 +21,6 @@ carsRoutes.post(
 
 carsRoutes.get("/available", listAvailableCarsController.handle);
 
-carsRoutes.post("/specifications/:id", createCarSpecificationController);
+carsRoutes.post("/specifications/:id", createCarSpecificationController.handle);
 
 export { carsRoutes };
