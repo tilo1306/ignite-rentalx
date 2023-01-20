@@ -5,19 +5,32 @@
     "emitDecoratorMetadata": true,
     "module": "commonjs",
     "rootDir": "./src",
-     "baseUrl": "./src",
-     "paths": {
-      "@modules/*":["modules/*"],
-      "@config/*":["config/*"],
-      "@shared/*":["shared/*"],
-      "@errors/*":["errors/*"],
-      "@utils/*":["utils/*"]
-     },
+    "baseUrl": "./src",
+    "paths": {
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@errors/*": [
+        "errors/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    },
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
-  },"include": ["src/**/*"]
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
