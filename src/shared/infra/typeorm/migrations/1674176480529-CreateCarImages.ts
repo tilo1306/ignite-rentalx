@@ -6,11 +6,7 @@ export class CreateCarImages1674176480529 implements MigrationInterface {
       new Table({
         name: "cars_image",
         columns: [
-          {
-            name: "id",
-            type: "uuid",
-            isPrimary: true,
-          },
+          { name: "id", type: "uuid", isPrimary: true },
           {
             name: "car_id",
             type: "uuid",
@@ -22,7 +18,7 @@ export class CreateCarImages1674176480529 implements MigrationInterface {
           {
             name: "created_at",
             type: "timestamp",
-            default: "now",
+            default: "now()",
           },
         ],
         foreignKeys: [
