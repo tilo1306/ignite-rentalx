@@ -22,7 +22,7 @@ class DevolutionRentalUseCase {
 
   async execute({ id, user_id }: IRequest) {
     const rental = await this.rentalsRepository.findById(id);
-    const car = await this.carsRepository.findById(id);
+    const car = await this.carsRepository.findById(rental.user_id);
     if (!rental) {
       throw new AppError("REntal does not exists");
     }
