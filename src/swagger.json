@@ -150,7 +150,7 @@
                   "password": {
                     "type": "string"
                   }
-                }
+                }	
               }
             }
           }
