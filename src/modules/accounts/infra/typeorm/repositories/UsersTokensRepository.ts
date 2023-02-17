@@ -4,7 +4,7 @@ import { getRepository, Repository } from "typeorm";
 
 import { UserTokens } from "../entities/UserTokens";
 
-class UserTokensRepository implements IUsersTokensRepository {
+class UsersTokensRepository implements IUsersTokensRepository {
   private repository: Repository<UserTokens>;
 
   constructor() {
@@ -21,24 +21,32 @@ class UserTokensRepository implements IUsersTokensRepository {
       refresh_token,
       user_id,
     });
+
     await this.repository.save(userToken);
 
     return userToken;
   }
+
   async findByUserIdAndRefreshToken(
     user_id: string,
     refresh_token: string
   ): Promise<UserTokens> {
-    const usersToken = await this.repository.findOne({
+    const usersTokens = await this.repository.findOne({
       user_id,
       refresh_token,
     });
-    return usersToken;
+    return usersTokens;
   }
 
   async deleteById(id: string): Promise<void> {
     await this.repository.delete(id);
   }
+
+  async findByRefreshToken(refresh_token: string): Promise<UserTokens> {
+    const userToken = await this.repository.findOne({ refresh_token });
+
+    return userToken;
+  }
 }
 
-export { UserTokensRepository };
+export { UsersTokensRepository };
